@@ -1,0 +1,122 @@
+.offers {
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../../assets/subscribe_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+
+.offers__title {
+  font-family: var(--playfair-display);
+  font-weight: 600;
+  font-size: 88px;
+  line-height: 140%;
+  max-width: 748px;
+  text-align: center;
+
+  color: var(--color-white);
+}
+
+.offers__description {
+  margin-top: 32px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 200%;
+  letter-spacing: -0.01em;
+  color: var(--color-white);
+  font-family: var(--plus-jakarta-sans);
+
+  opacity: 0.8;
+}
+
+.offers__subscription {
+  min-width: 481px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 14px 14px 24px;
+  border: 1px solid var(--color-white);
+  border-radius: 46px;
+}
+
+.offers__subscription input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.offers__subscription input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  font-family: var(--plus-jakarta-sans);
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.offers__subscription button {
+  padding: 20px;
+  min-width: 180px;
+  background: var(--black-400);
+  border-radius: 46px;
+  border: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .offers {
+    padding: 32px;
+  }
+  .offers__title {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .offers__title {
+    font-size: 40px;
+  }
+
+  .offers__description {
+    font-size: 15px;
+  }
+
+  .offers__subscription {
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+    min-width: 100%;
+  }
+
+  .offers__subscription input {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: var(--color-white);
+    padding: 20px 35px;
+    min-width: 100%;
+    opacity: 0.5;
+    border-radius: 30px;
+  }
+
+  .offers__subscription button {
+    min-width: 100%;
+  }
+}

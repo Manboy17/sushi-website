@@ -1,0 +1,179 @@
+.trending {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.trending__content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 32px 64px;
+}
+
+.trending__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trending__list li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+  min-width: 210px;
+}
+
+.trending__list li p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 200%;
+  font-family: var(--plus-jakarta-sans);
+
+  color: #121211;
+}
+
+.trending__image {
+  background-color: var(--color-creamson);
+  flex: 1;
+  position: relative;
+  padding: 32px 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending__image img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.trending__discover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--secondary-color);
+  z-index: 1;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trending__arrow {
+  position: absolute;
+  z-index: 1;
+}
+
+.trending__arrow-left {
+  top: 9%;
+  left: -2.5px;
+}
+
+.trending__arrow-bottom {
+  right: 16%;
+  bottom: -6.5px;
+}
+
+.trending__arrow-left img,
+.trending__arrow-bottom img,
+.trending__arrow-top img,
+.trending__arrow-right img {
+  width: auto;
+  height: 100%;
+}
+
+.trending__arrow-right {
+  right: -2.5px;
+  top: 24%;
+}
+
+.trending__arrow-top {
+  top: -10px;
+  left: 18.5%;
+}
+
+.trending__discover p {
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  font-family: var(--plus-jakarta-sans);
+}
+
+.trending-sushi,
+.trending-drinks {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.trending__bg-sushi::after {
+  content: url("../../assets/trending_icon1.png");
+  position: absolute;
+  top: 64px;
+  right: 80px;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.trending__bg-drinks::before {
+  content: url("../../assets/trending_icon2.png");
+  position: absolute;
+  top: 64px;
+  left: 80px;
+  height: auto;
+  background-size: contain;
+}
+
+@media (max-width: 1000px) {
+  .trending-sushi {
+    flex-direction: column;
+  }
+
+  .trending-drinks {
+    flex-direction: column-reverse;
+  }
+
+  .trending__arrow,
+  .trending__discover {
+    display: none;
+  }
+
+  .trending__image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .trending__content {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 650px) {
+  .trending__image img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .trending__bg-sushi::after,
+  .trending__bg-drinks::before {
+    display: none;
+  }
+}
